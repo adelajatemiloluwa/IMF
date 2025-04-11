@@ -1,0 +1,72 @@
+.topics-container {
+  font-family: 'Arial', sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.topics-header {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: left;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.topic-item {
+  padding: 15px;
+  font-size: 16px;
+  color: #333;
+  background-color: transparent; /* Changed to transparent */
+  border: none; /* Removed border */
+  border-radius: 0; /* Removed border radius */
+  transition: all 0.3s ease;
+  cursor: pointer;
+  line-height: 1.4;
+  text-align: left; /* Align text to left */
+}
+
+.topic-item:hover {
+  background-color: rgba(0, 0, 0, 0.05); /* Subtle hover effect */
+  transform: none; /* Removed translateY effect */
+  box-shadow: none; /* Removed shadow */
+}
+
+.topic-item.see-all {
+  font-weight: bold;
+  color: #0066cc;
+  border: none; /* Removed dashed border */
+  background-color: transparent; /* Removed blue background */
+  text-decoration: underline; /* Added underline instead */
+}
+
+.topic-item.see-all:hover {
+  background-color: transparent;
+  color: #004499; /* Darker blue on hover */
+  text-decoration: none; /* Remove underline on hover */
+}
+
+@media (max-width: 768px) {
+  .topics-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .topic-item {
+    font-size: 15px;
+    padding: 12px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .topics-grid {
+    grid-template-columns: 1fr;
+  }
+}

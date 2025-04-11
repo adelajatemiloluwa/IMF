@@ -1,0 +1,73 @@
+.resources-nav-container {
+    font-family: 'Arial', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .resources-nav-header {
+    font-size: 30px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  .resources-nav-items {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px; /* Reduced from 15px to make items closer */
+  }
+  
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 8px 5px; /* Reduced padding */
+    border-radius: 5px;
+    flex: 1; /* Makes items share space equally */
+    min-width: 0; /* Allows text to shrink */
+  }
+  
+  .nav-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .nav-icon {
+    width: 90px; /* Slightly smaller icons */
+    height: 40px;
+    margin-bottom: 5px; /* Reduced space between icon and text */
+  }
+  
+  .nav-item span {
+    font-size: 12px; /* Slightly smaller text */
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap; /* Prevents text wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* For smaller screens */
+  @media (max-width: 768px) {
+    .resources-nav-items {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    
+    .nav-item {
+      flex: 0 0 calc(33% - 10px); /* 3 items per row */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-item {
+      flex: 0 0 calc(50% - 10px); /* 2 items per row */
+    }
+  }

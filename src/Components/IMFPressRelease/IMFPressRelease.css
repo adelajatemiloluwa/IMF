@@ -1,0 +1,121 @@
+/* IMFPressRelease.css */
+.imf-press-release {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #333;
+  }
+  
+  .imf-header {
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 20px;
+  }
+  
+  .imf-header h1 {
+    font-size: 3rem;
+    color: #0066cc;
+    margin: 0;
+  }
+  
+  .imf-header h2 {
+    font-size: 1.5rem;
+    color: #666;
+    margin: 5px 0 0;
+  }
+  
+  /* Horizontal layout container */
+  .sections-container {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Section styling with images */
+  .press-section {
+    flex: 1;
+    margin-bottom: 30px;
+    padding: 0;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    overflow: hidden; /* Ensures images don't overflow rounded corners */
+  }
+  
+  .section-image-container {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+  }
+  
+  .section-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .section-image:hover {
+    transform: scale(1.05);
+  }
+  
+  .press-section h3, 
+  .press-section h4,
+  .press-section .press-release-item,
+  .press-section .bonds-question {
+    padding: 0 15px;
+  }
+  
+  h3 {
+    font-size: 1.3rem;
+    margin: 15px 0;
+  }
+  
+  h4 {
+    font-size: 1.1rem;
+    color: #666;
+    font-weight: normal;
+    margin: -10px 0 15px;
+    font-style: italic;
+  }
+  
+  .press-release-item {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-left: 4px solid #0066cc;
+    margin: 15px;
+  }
+  
+  .press-release-tag {
+    display: inline-block;
+    background-color: #0066cc;
+    color: white;
+    padding: 3px 8px;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  .bonds-question {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 15px;
+  }
+  
+  /* WATCH tag specific styling */
+  .press-release-item .press-release-tag[content="WATCH"] {
+    background-color: #e74c3c;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .sections-container {
+      flex-direction: column;
+    }
+    
+    .section-image-container {
+      height: 220px;
+    }
+  }
