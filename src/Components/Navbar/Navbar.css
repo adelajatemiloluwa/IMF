@@ -13,12 +13,25 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Logo and heading wrapper */
-.imf-header {
+/* Header Top (logo, title, hamburger) */
+.header-top {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+/* Hamburger Menu (hidden on desktop) */
+.hamburger-menu {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 20px;
 }
 
 /* IMF Image */
@@ -26,6 +39,7 @@
   width: 370px;
   height: auto;
   margin-bottom: 10px;
+  max-width: 100%;
 }
 
 /* Clickable Heading */
@@ -84,4 +98,66 @@ nav ul li {
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
   padding: 0 20px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .header-top {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  
+  .imf-image {
+    width: 200px;
+    margin-bottom: 5px;
+  }
+  
+  .imf-heading h1 {
+    font-size: 12px;
+    white-space: normal;
+    text-align: center;
+    padding: 5px 0;
+  }
+  
+  .hamburger-menu {
+    display: block;
+  }
+  
+  nav ul {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  nav.open ul {
+    display: flex;
+  }
+  
+  nav ul li {
+    text-align: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .fullscreen-image {
+    height: 50vh;
+  }
+  
+  .image-text {
+    font-size: 1.2rem;
+    bottom: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .imf-heading h1 {
+    font-size: 16px;
+  }
+  
+  .image-text {
+    font-size: 1rem;
+  }
 }

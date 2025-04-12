@@ -1,18 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Navbar.css';
 import logo from '../../assets/logo.jpg';
 import imf from '../../assets/imf.svg';
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div className="top-section">
-  <div className="imf-header">
-    <img src={imf} alt="IMF Logo" className="imf-image" />
-    <Link to="/" className="imf-heading">
-      <h1>INTERNATIONAL MONETARY FUND</h1>
-    </Link>
-        <nav>
+      <div className="imf-header">
+        <div className="header-top">
+          <img src={imf} alt="IMF Logo" className="imf-image" />
+          <Link to="/" className="imf-heading">
+            <h1>INTERNATIONAL MONETARY FUND</h1>
+          </Link>
+          <button className="hamburger-menu" onClick={toggleMenu}>
+            ☰
+          </button>
+        </div>
+        
+        <nav className={`nav-menu ${isMenuOpen ? 'open' : ''}`}>
           <ul>
             <li>ABOUT</li>
             <li>RESEARCH</li>
